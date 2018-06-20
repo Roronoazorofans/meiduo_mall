@@ -2,38 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4bdc897-4ce5-4dd1-97a9-285c6d4ad34f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/celery_tasks/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/celery_tasks/config.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/celery_tasks/main.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/celery_tasks/sms/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/celery_tasks/sms/tasks.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/celery_tasks/sms/utils/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/celery_tasks/sms/utils/yuntongxun/CCPRestSDK.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/celery_tasks/sms/utils/yuntongxun/sms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/celery_tasks/sms/utils/yuntongxun/xmltojson.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/users/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/serializers.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/utils/yuntongxun/CCPRestSDK.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/utils/yuntongxun/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/utils/yuntongxun/sms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/utils/yuntongxun/xmltojson.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/libs/captcha/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/utils/captcha/__init__.py" afterPath="$PROJECT_DIR$/meiduo_mall/celery_tasks/sms/utils/yuntongxun/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/utils/captcha/captcha.py" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/libs/captcha/captcha.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/utils/captcha/fonts/Arial.ttf" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/libs/captcha/fonts/Arial.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/utils/captcha/fonts/Georgia.ttf" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/libs/captcha/fonts/Georgia.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/utils/captcha/fonts/actionj.ttf" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/libs/captcha/fonts/actionj.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/js/register.js" afterPath="$PROJECT_DIR$/front_end_pc/js/register.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/register.html" afterPath="$PROJECT_DIR$/front_end_pc/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/constants.py" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/constants.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/urls.py" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/views.py" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/settings/dev.py" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/settings/dev.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/urls.py" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -148,6 +117,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -674,7 +649,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529493028260</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="发送短信验证码+&#10;跨域CORS+&#10;celery发送短信">
+      <created>1529503174769</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1529503174769</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -728,7 +710,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="创建工程+配置+建立用户模型类" />
     <MESSAGE value="生成图片验证码前后端实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="生成图片验证码前后端实现" />
+    <MESSAGE value="发送短信验证码+&#10;跨域CORS+&#10;celery发送短信" />
+    <option name="LAST_COMMIT_MESSAGE" value="发送短信验证码+&#10;跨域CORS+&#10;celery发送短信" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
