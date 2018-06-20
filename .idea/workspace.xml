@@ -2,88 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4bdc897-4ce5-4dd1-97a9-285c6d4ad34f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/utils/captcha/fonts/Arial.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/utils/captcha/fonts/Georgia.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/utils/captcha/fonts/actionj.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/js/axios-0.18.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/front_end_pc/js/host.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/constants.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/utils/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/utils/captcha/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/utils/captcha/captcha.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/QQ-weixin.png" afterPath="$PROJECT_DIR$/front_end_pc/images/QQ-weixin.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/adv01.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/adv01.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/adv02.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/adv02.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/banner01.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/banner01.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/banner02.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/banner02.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/banner03.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/banner03.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/bar_code.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/bar_code.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/cat.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/cat.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/clock.jpeg" afterPath="$PROJECT_DIR$/front_end_pc/images/clock.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/clock.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/clock.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/down.png" afterPath="$PROJECT_DIR$/front_end_pc/images/down.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/edit.png" afterPath="$PROJECT_DIR$/front_end_pc/images/edit.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/find-password.png" afterPath="$PROJECT_DIR$/front_end_pc/images/find-password.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/goods/goods001.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods001.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/goods/goods002.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods002.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/goods/goods003.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods003.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/goods/goods004.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods004.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/goods/goods005.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods005.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/goods/goods006.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods006.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/goods/goods007.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods007.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/goods/goods008.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods008.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/goods/goods009.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods009.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/goods_450.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/goods_450.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/icons.png" afterPath="$PROJECT_DIR$/front_end_pc/images/icons.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/icons02.png" afterPath="$PROJECT_DIR$/front_end_pc/images/icons02.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/interval_line.png" afterPath="$PROJECT_DIR$/front_end_pc/images/interval_line.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/left_bg.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/left_bg.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/login_banner.png" afterPath="$PROJECT_DIR$/front_end_pc/images/login_banner.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/logo.png" afterPath="$PROJECT_DIR$/front_end_pc/images/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/logo02.png" afterPath="$PROJECT_DIR$/front_end_pc/images/logo02.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/pay_icons.png" afterPath="$PROJECT_DIR$/front_end_pc/images/pay_icons.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/pic_code.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/pic_code.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/register_banner.png" afterPath="$PROJECT_DIR$/front_end_pc/images/register_banner.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/selected.png" afterPath="$PROJECT_DIR$/front_end_pc/images/selected.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/shine.png" afterPath="$PROJECT_DIR$/front_end_pc/images/shine.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/shop_cart.png" afterPath="$PROJECT_DIR$/front_end_pc/images/shop_cart.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/slide01.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/slide01.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/slide02.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/slide02.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/slide03.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/slide03.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/slide04.jpg" afterPath="$PROJECT_DIR$/front_end_pc/images/slide04.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/stars.png" afterPath="$PROJECT_DIR$/front_end_pc/images/stars.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/success.png" afterPath="$PROJECT_DIR$/front_end_pc/images/success.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/images/time_count_bg.png" afterPath="$PROJECT_DIR$/front_end_pc/images/time_count_bg.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/front_end_pc/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/.idea/misc.xml" afterPath="$PROJECT_DIR$/front_end_pc/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/.idea/modules.xml" afterPath="$PROJECT_DIR$/front_end_pc/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/.idea/workspace.xml" afterPath="$PROJECT_DIR$/front_end_pc/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/.idea/美多商城前端资源.iml" afterPath="$PROJECT_DIR$/front_end_pc/.idea/美多商城前端资源.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/cart.html" afterPath="$PROJECT_DIR$/front_end_pc/cart.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/css/main.css" afterPath="$PROJECT_DIR$/front_end_pc/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/css/reset.css" afterPath="$PROJECT_DIR$/front_end_pc/css/reset.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/detail.html" afterPath="$PROJECT_DIR$/front_end_pc/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/goods_judge.html" afterPath="$PROJECT_DIR$/front_end_pc/goods_judge.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/index.html" afterPath="$PROJECT_DIR$/front_end_pc/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/js/goods_judge.js" afterPath="$PROJECT_DIR$/front_end_pc/js/goods_judge.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/js/jquery-1.12.4.min.js" afterPath="$PROJECT_DIR$/front_end_pc/js/jquery-1.12.4.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/js/register.js" afterPath="$PROJECT_DIR$/front_end_pc/js/register.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/js/slide.js" afterPath="$PROJECT_DIR$/front_end_pc/js/slide.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/js/user_center_site.js" afterPath="$PROJECT_DIR$/front_end_pc/js/user_center_site.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/js/vue-2.5.16.js" afterPath="$PROJECT_DIR$/front_end_pc/js/vue-2.5.16.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/list.html" afterPath="$PROJECT_DIR$/front_end_pc/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/login.html" afterPath="$PROJECT_DIR$/front_end_pc/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/order_success.html" afterPath="$PROJECT_DIR$/front_end_pc/order_success.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/place_order.html" afterPath="$PROJECT_DIR$/front_end_pc/place_order.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/register.html" afterPath="$PROJECT_DIR$/front_end_pc/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/user_center_info.html" afterPath="$PROJECT_DIR$/front_end_pc/user_center_info.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/user_center_order.html" afterPath="$PROJECT_DIR$/front_end_pc/user_center_order.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/user_center_pass.html" afterPath="$PROJECT_DIR$/front_end_pc/user_center_pass.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/front_end_pc/user_center_site.html" afterPath="$PROJECT_DIR$/front_end_pc/user_center_site.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/settings/dev.py" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/settings/dev.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/urls.py" afterPath="$PROJECT_DIR$/meiduo_mall/meiduo_mall/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -175,8 +94,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+            <state relative-caret-position="440">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -688,16 +607,23 @@
       <option name="project" value="LOCAL" />
       <updated>1529398647074</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="生成图片验证码前后端实现">
+      <created>1529493028260</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1529493028260</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15113072" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5019305" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298647" sideWeight="0.5019305" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984003" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -741,7 +667,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="创建工程+配置+建立用户模型类" />
-    <option name="LAST_COMMIT_MESSAGE" value="创建工程+配置+建立用户模型类" />
+    <MESSAGE value="生成图片验证码前后端实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="生成图片验证码前后端实现" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1061,8 +988,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/meiduo_mall/meiduo_mall/apps/verifications/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        <state relative-caret-position="440">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
