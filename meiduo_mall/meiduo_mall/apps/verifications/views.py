@@ -1,18 +1,14 @@
 import random
-
 from django.http import HttpResponse
 from django_redis import get_redis_connection
-from rest_framework import status
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
-
 from celery_tasks.sms import tasks
 from meiduo_mall.libs.captcha.captcha import captcha
-from meiduo_mall.utils.exceptions import logger
 from verifications import constants
 from . import serializers
-from .utils.yuntongxun.sms import CCP
+
 
 # Create your views here.
 class ImageCodeView(APIView):
@@ -74,8 +70,8 @@ class SMSCodeView(GenericAPIView):
         # 使用celery发送短信
         # 发送短信验证码
         print(sms_code)
-        # sms_code_expires = str(constants.SMS_CODE_REDIS_EXPIRES // 60)
-        # tasks.send_sms_code.delay(mobile, sms_code, sms_code_expires)
+        sms_code_expires = str(constants.SMS_CODE_REDIS_EXPIRES // 60)
+        tasks.send_sms_code.delay(mobile, sms_code, sms_code_expires)
 
         return Response({"message": "OK"})
 
