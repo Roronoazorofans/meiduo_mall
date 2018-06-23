@@ -43,4 +43,5 @@ class UserView(CreateAPIView):
         验证用户是否同意协议
         验证两次密码是否一致"""
     # 验证及注册交由序列化器完成
+    print("hello")
     serializer_class = serializers.CreateUserSerializer

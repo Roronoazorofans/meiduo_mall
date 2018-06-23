@@ -70,8 +70,8 @@ class SMSCodeView(GenericAPIView):
         # 使用celery发送短信
         # 发送短信验证码
         print(sms_code)
-        sms_code_expires = str(constants.SMS_CODE_REDIS_EXPIRES // 60)
-        tasks.send_sms_code.delay(mobile, sms_code, sms_code_expires)
+        # sms_code_expires = str(constants.SMS_CODE_REDIS_EXPIRES // 60)
+        # tasks.send_sms_code.delay(mobile, sms_code, sms_code_expires)
 
         return Response({"message": "OK"})
 
