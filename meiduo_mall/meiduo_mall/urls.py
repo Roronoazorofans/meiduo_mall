@@ -20,6 +20,7 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include("verifications.urls")),
-    url(r'^', include('users.urls'))
+    url(r'^', include('users.urls')),
+    url(r'^oauth/', include('oauth.urls')),  # 用于QQ登录的总路由
 
 ]
