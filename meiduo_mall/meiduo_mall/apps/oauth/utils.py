@@ -4,10 +4,10 @@ from django.conf import settings
 from urllib.parse import urlencode, parse_qs
 from urllib.request import urlopen
 import json
-
 from meiduo_mall.utils.exceptions import logger
+from oauth import constants
 from .exceptions import QQAPIError
-
+from itsdangerous import TimedJSONWebSignatureSerializer as TJWSSerializer, BadData
 
 class OauthQQ(object):
 
@@ -77,5 +77,34 @@ class OauthQQ(object):
             data = parse_qs(response_data)
             logger.error('code=%s msg=%s' % (data.get('code'), data.get('msg')))
             raise QQAPIError
-        open_id = data.get('open_id')
+        open_id = data.get('openid')
         return open_id
+
+
+    """查询用户在本地服务器是否绑定了本地access_token"""
+    @staticmethod
+    def check_bind_access_token(access_token):
+        """使用itsdangerous模块校验是否绑定了access_token"""
+        serializer = TJWSSerializer(settings.SECRECT_KEY, expires_in=constants.BIND_USER_ACCESS_TOKEN_EXPIRES)
+        try:
+            data = serializer.loads(access_token)
+        except BadData:
+            return None
+        else:
+            return data['open_id']
+
+
+    """定义生成用户在本地的access_token"""
+    def generate_bind_access_token(self, open_id):
+        serializer = TJWSSerializer(settings.SECRET_KEY, expires_in=constants.BIND_USER_ACCESS_TOKEN_EXPIRES)
+        # 将字典数据转换  转换后为bytes类型
+        token = serializer.dumps({"open_id": open_id})
+        return token.decode()
+
+
+
+
+
+
+
+
