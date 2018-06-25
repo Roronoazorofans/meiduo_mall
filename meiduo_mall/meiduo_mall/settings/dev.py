@@ -234,11 +234,11 @@ QQ_STATE = '/'
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.163.com'
+EMAIL_HOST = 'smtp.yeah.net'
 EMAIL_PORT = 25
 #发送邮件的邮箱
 EMAIL_HOST_USER = 'zorozhang@yeah.net'
 #在邮箱中设置的客户端授权密码
 EMAIL_HOST_PASSWORD = 'jiangang930526'
 #收件人看到的发件人
-EMAIL_FROM = 'python<zorozhang@yeah.net>'
+EMAIL_FROM = '美多商城<zorozhang@yeah.net>'

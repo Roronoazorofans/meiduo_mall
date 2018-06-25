@@ -1,5 +1,5 @@
 from rest_framework.response import Response
-from rest_framework.views import APIView
+from rest_framework.views import APIView, status
 from rest_framework.generics import CreateAPIView, RetrieveAPIView, UpdateAPIView
 from rest_framework.permissions import IsAuthenticated
 from users.models import User
@@ -51,7 +51,7 @@ class UserView(CreateAPIView):
 class UserDetailView(RetrieveAPIView):
 
     # 指明使用的序列化器
-    serializer_class = UserDetailSerializer
+    serializer_class = serializers.UserDetailSerializer
     # 指明可以访问该视图的权限为已经通过认证的用户,即登录之后
     permission_classes = [IsAuthenticated]
 
@@ -60,8 +60,29 @@ class UserDetailView(RetrieveAPIView):
         return self.request.user
 
 class EmailView(UpdateAPIView):
-    serializer_class = EmailSerializer
+    serializer_class = serializers.EmailSerializer
     permission_classes = [IsAuthenticated]
 
     def get_object(self, *args, **kwargs):
         return self.request.user
+
+
+class VerifyEmailView(APIView):
+    """邮箱验证"""
+    def get(self,request):
+        # 获取token
+        token = request.query_params.get('token')
+        if not token:
+            return Response({'message': '缺少token'}, status=status.HTTP_400_BAD_REQUEST)
+
+        # 验证token
+        user = User.check_verify_email_token(token)
+        if user is None:
+            return Response({'message': '链接信息无效'}, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            user.email_active = True
+            user.save()
+            return Response({'message': 'OK'})
+
+
+

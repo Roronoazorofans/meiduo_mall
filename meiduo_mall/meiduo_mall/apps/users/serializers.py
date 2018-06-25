@@ -4,7 +4,7 @@ import re
 from .models import User
 from django_redis import get_redis_connection
 from rest_framework_jwt.settings import api_settings
-from celery_tasks.sms.tasks import send_verify_email
+from celery_tasks.email.tasks import send_verify_email
 
 """定义序列化器处理校验工作
         验证手机号是否符合要求
