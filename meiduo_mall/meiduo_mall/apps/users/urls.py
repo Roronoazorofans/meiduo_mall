@@ -10,5 +10,6 @@ urlpatterns = [
     # 调用rest_framework_jwt　提供的签发JWT　token的视图函数,　
     # 在用户每次登录或注册时后端都会签发一个token给前端保存,　用以保存用户的登录状态
     url(r'^authorizations/$', obtain_jwt_token),
+    url(r'^emails/$', views.EmailView.as_view()), # 设置邮箱
 
 ]

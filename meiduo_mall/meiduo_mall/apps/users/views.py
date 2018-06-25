@@ -1,9 +1,10 @@
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework.generics import CreateAPIView
-
+from rest_framework.generics import CreateAPIView, RetrieveAPIView, UpdateAPIView
+from rest_framework.permissions import IsAuthenticated
 from users.models import User
 from users import serializers
+from users.serializers import UserDetailSerializer, EmailSerializer
 
 
 # Create your views here.
@@ -44,3 +45,23 @@ class UserView(CreateAPIView):
         验证两次密码是否一致"""
     # 验证及注册交由序列化器完成
     serializer_class = serializers.CreateUserSerializer
+
+
+
+class UserDetailView(RetrieveAPIView):
+
+    # 指明使用的序列化器
+    serializer_class = UserDetailSerializer
+    # 指明可以访问该视图的权限为已经通过认证的用户,即登录之后
+    permission_classes = [IsAuthenticated]
+
+    # 调用该方获取该模型类对象
+    def get_object(self):
+        return self.request.user
+
+class EmailView(UpdateAPIView):
+    serializer_class = EmailSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_object(self, *args, **kwargs):
+        return self.request.user
