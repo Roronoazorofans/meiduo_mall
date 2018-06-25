@@ -5,6 +5,8 @@ from django.contrib.auth.models import AbstractUser
 class User(AbstractUser):
     """用户模型类"""
     mobile = models.CharField(max_length=11, unique=True, verbose_name="手机号")
+    # 添加邮箱验证状态字段,　布尔类型,默认为False
+    email_active = models.BooleanField(default=False, verbose_name="邮箱验证状态")
     USERNAME_FIELD = 'mobile'
 
     class Meta:
