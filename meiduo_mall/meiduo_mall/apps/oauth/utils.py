@@ -85,7 +85,7 @@ class OauthQQ(object):
     @staticmethod
     def check_bind_access_token(access_token):
         """使用itsdangerous模块校验是否绑定了access_token"""
-        serializer = TJWSSerializer(settings.SECRECT_KEY, expires_in=constants.BIND_USER_ACCESS_TOKEN_EXPIRES)
+        serializer = TJWSSerializer(settings.SECRET_KEY, expires_in=constants.BIND_USER_ACCESS_TOKEN_EXPIRES)
         try:
             data = serializer.loads(access_token)
         except BadData:

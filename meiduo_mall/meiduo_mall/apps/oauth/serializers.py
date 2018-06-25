@@ -51,7 +51,7 @@ class OauthQQUserSerializer(serializers.ModelSerializer):
 
         # 通过手机号查询用户是否存在,如果用户存在,校验用户密码
         try:
-            user = User.objects.get(mobile)
+            user = User.objects.get(mobile=mobile)
         except User.DoesNotExist:
             pass
         else:
@@ -59,6 +59,7 @@ class OauthQQUserSerializer(serializers.ModelSerializer):
             if not user.check_password(password):
                 raise serializers.ValidationError("密码错误")
             attrs['user'] = user
+        return attrs
 
     def create(self, validated_data):
         open_id = validated_data['open_id']
@@ -71,7 +72,7 @@ class OauthQQUserSerializer(serializers.ModelSerializer):
             user = User.objects.create_user(username=mobile,mobile=mobile, password=password)
 
         # 绑定user 和　open_id
-        OauthQQUser.objects.create(user=user, open_id=open_id)
+        OauthQQUser.objects.create(user=user, openid=open_id)
 
         # 签发jwt token
         jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
