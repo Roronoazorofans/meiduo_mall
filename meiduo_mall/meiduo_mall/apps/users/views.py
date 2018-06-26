@@ -1,10 +1,15 @@
+from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.views import APIView, status
 from rest_framework.generics import CreateAPIView, RetrieveAPIView, UpdateAPIView
 from rest_framework.permissions import IsAuthenticated
+
+from users import constants
 from users.models import User
 from users import serializers
 from users.serializers import UserDetailSerializer, EmailSerializer
+from rest_framework.mixins import CreateModelMixin,UpdateModelMixin
+from rest_framework.viewsets import GenericViewSet
 
 
 # Create your views here.
@@ -83,6 +88,66 @@ class VerifyEmailView(APIView):
             user.email_active = True
             user.save()
             return Response({'message': 'OK'})
+
+
+
+"""添加用户地址管理视图"""
+class AddressViewset(CreateModelMixin,UpdateModelMixin,GenericViewSet):
+
+    serializer_class = serializers.UserAddressSerializer
+    permission_classes = [IsAuthenticated]
+
+    """用户地址新增和删改"""
+    def get_queryset(self):
+        return self.request.user.addresses.filter(is_deleted=False)
+
+    def list(self,request,*args,**kwargs):
+        """查询用户的所有地址"""
+        queryset = self.get_queryset()
+        serializer = self.get_serializer(queryset, many=True)
+        user = self.request.user
+
+        return Response({
+            'user_id': user.id,
+            'default_address_id': user.default_address_id,
+            'limit': constants.USER_ADDRESS_COUNTS_LIMIT,
+            'addresses': serializer.data
+        })
+
+    def create(self, request, *args, **kwargs):
+        """新增用户地址"""
+        # 判断用户地址数据数目不能超过上限
+        count = request.user.addresses.count()
+        if count >= constants.USER_ADDRESS_COUNTS_LIMIT:
+            return Response({'message': '保存地址数据已达到上线'}, status=status.HTTP_400_BAD_REQUEST)
+        return super().create(request,*args,**kwargs)
+
+    def destroy(self, request, *args, **kwargs):
+        """处理删除用户地址"""
+        address = self.get_object()
+        address.is_deleted = True
+        address.save()
+
+        return Response(status=status.HTTP_204_NO_CONTENT)
+    @action(methods=['put'], detail=True)
+    def status(self, request, pk=None):
+        """设置默认地址"""
+        address = self.get_object()
+        request.user.default_address = address
+        request.user.save()
+
+        return Response({'message':'OK'}, status=status.HTTP_200_OK)
+
+    @action(methods=['put'], detail=True)
+    def title(self, request, pk=None):
+        """修改地址标题"""
+        address = self.get_object()
+        serializer = serializers.AddressTitleSerializer(instance=address, data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+
+        return Response(serializer.data)
+
 
 
 
