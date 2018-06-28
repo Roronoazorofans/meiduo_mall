@@ -12,7 +12,7 @@ class User(AbstractUser):
     # 添加邮箱验证状态字段,　布尔类型,默认为False
     email_active = models.BooleanField(default=False, verbose_name="邮箱验证状态")
     default_address = models.ForeignKey('users.Address',on_delete=models.SET_NULL,related_name='users',null=True,blank=True,verbose_name='默认地址')
-    USERNAME_FIELD = 'mobile'
+    # USERNAME_FIELD = 'mobile'
 
     class Meta:
         db_table = 'tb_users'

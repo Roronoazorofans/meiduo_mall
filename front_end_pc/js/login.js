@@ -42,7 +42,7 @@ var vm = new Vue({
 
             if (this.error_username == false && this.error_pwd == false) {
                 axios.post(this.host+'/authorizations/', {
-                        mobile: this.username,
+                        username: this.username,
                         password: this.password
                     }, {
                         responseType: 'json',

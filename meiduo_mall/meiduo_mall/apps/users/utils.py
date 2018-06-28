@@ -36,7 +36,7 @@ def get_user_by_account(account):
 # 自定义用户名和手机号认证
 class UsernameMobileAuthBackend(ModelBackend):
     # 重写认证方法
-    def authenticate(self, request, mobile=None, password=None, **kwargs):
-        user = get_user_by_account(mobile)
+    def authenticate(self, request, username=None, password=None, **kwargs):
+        user = get_user_by_account(username)
         if user is not None and user.check_password(password):
             return user
