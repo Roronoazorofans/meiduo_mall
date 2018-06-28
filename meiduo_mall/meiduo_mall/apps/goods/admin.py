@@ -3,7 +3,48 @@ from django.contrib import admin
 # Register your models here.
 from goods import models
 
-admin.site.register(models.GoodsCategory)
+# 管理员在admin站点保存商品信息时触发生成商品静态页面的异步任务
+# 重新实现admin管理类的save_model()和delete_model()方法
+class SKUAdmin(admin.ModelAdmin):
+    def save_model(self, request, obj, form, change):
+        obj.save()
+        # 异步实现
+        from celery_tasks.html.html import generate_static_sku_detail_html
+        generate_static_sku_detail_html.delay(obj.id)
+
+class SKUSpecificationAdmin(admin.ModelAdmin):
+    def save_model(self, request, obj, form, change):
+        obj.save()
+        from celery_tasks.html.html import generate_static_sku_detail_html
+        generate_static_sku_detail_html.delay(obj.sku.id)
+    def delete_model(self, request, obj):
+        sku_id = obj.sku.id
+        obj.delete()
+        from celery_tasks.html.html import generate_static_sku_detail_html
+        generate_static_sku_detail_html.delay(obj.sku.id)
+
+class SKUImageAdmin(admin.ModelAdmin):
+    def save_model(self, request, obj, form, change):
+        obj.save()
+        from celery_tasks.html.html import generate_static_sku_detail_html
+        generate_static_sku_detail_html.delay(obj.sku.id)
+
+        # 设置SKU默认图片
+        sku = obj.sku
+        if not sku.default_image_url:
+            sku.default_image_url = obj.image.url
+            sku.save()
+
+    def delete_model(self, request, obj):
+        sku_id = obj.sku.id
+        obj.delete()
+        from celery_tasks.html.html import generate_static_sku_detail_html
+        generate_static_sku_detail_html.delay(sku_id)
+
+
+
+
+
 admin.site.register(models.GoodsChannel)
 admin.site.register(models.Goods)
 admin.site.register(models.Brand)
