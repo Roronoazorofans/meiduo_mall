@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^authorizations/$', obtain_jwt_token),
     url(r'^email/$', views.EmailView.as_view()), # 设置邮箱
     url(r'^emails/verification/$', views.VerifyEmailView.as_view()), # 验证邮箱链接
+    url(r'^browse_histories/$', views.UserBrowsingHistoryView.as_view()), # 用户浏览历史记录
 
 ]
 

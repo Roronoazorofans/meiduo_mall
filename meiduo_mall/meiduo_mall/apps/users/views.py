@@ -1,15 +1,20 @@
+from django_redis import get_redis_connection
+from rest_framework import mixins
 from rest_framework.decorators import action
+from rest_framework.generics import CreateAPIView, RetrieveAPIView, UpdateAPIView
+from rest_framework.generics import GenericAPIView
+from rest_framework.mixins import CreateModelMixin,UpdateModelMixin
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView, status
-from rest_framework.generics import CreateAPIView, RetrieveAPIView, UpdateAPIView
-from rest_framework.permissions import IsAuthenticated
-
-from users import constants
-from users.models import User
-from users import serializers
-from users.serializers import UserDetailSerializer, EmailSerializer
-from rest_framework.mixins import CreateModelMixin,UpdateModelMixin
 from rest_framework.viewsets import GenericViewSet
+
+from goods.models import SKU
+from goods.serializers import SKUSerializer
+from users import constants
+from users import serializers
+from users.models import User
+from users.serializers import AddUserBrowsingHistorySerializer
 
 
 # Create your views here.
@@ -147,6 +152,42 @@ class AddressViewset(CreateModelMixin,UpdateModelMixin,GenericViewSet):
         serializer.save()
 
         return Response(serializer.data)
+
+
+# 用户浏览记录
+class UserBrowsingHistoryView(mixins.CreateModelMixin, GenericAPIView):
+
+    serializer_class = AddUserBrowsingHistorySerializer
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        """保存"""
+        return self.create(request)
+
+    def get(self, request):
+        user_id = request.user.id
+        redis_conn = get_redis_connection('history')
+        history = redis_conn.lrange("history_%s" % user_id, 0, constants.USER_BROWSING_HISTORY_COUNTS_LIMIT)
+        skus = []
+        for sku_id in history:
+            sku = SKU.objects.get(id=sku_id)
+            skus.append(sku)
+
+        serializer = SKUSerializer(skus,many=True)
+        return Response(serializer.data)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

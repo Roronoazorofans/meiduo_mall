@@ -24,4 +24,6 @@ urlpatterns = [
     url(r'^oauth/', include('oauth.urls')),  # 用于QQ登录的总路由
     url(r'', include('areas.urls')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    url(r'', include('goods.urls')),
+
 ]
