@@ -19,6 +19,17 @@ class CartSerializer(serializers.Serializer):
 
         if data['count'] > sku.stock:
             raise serializers.ValidationError('商品库存不足')
-
-
         return data
+
+
+class CartSKUSerializer(serializers.ModelSerializer):
+    """创建购物车商品数据序列化器"""
+
+    # 添加count和selected字段
+    count = serializers.IntegerField(label='数量')
+    selected = serializers.BooleanField(label='是否勾选')
+
+    # 声明管理的模型类和（反）序列化的字段
+    class Meta:
+        model = SKU
+        fields = ('id','name','default_image_url','price','count','selected')

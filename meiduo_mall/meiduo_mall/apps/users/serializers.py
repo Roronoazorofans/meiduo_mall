@@ -3,6 +3,7 @@ import re
 from django_redis import get_redis_connection
 from rest_framework import serializers
 from rest_framework_jwt.settings import api_settings
+
 from celery_tasks.email.tasks import send_verify_email
 from goods.models import SKU
 from users import constants
